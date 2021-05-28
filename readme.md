@@ -4,3 +4,4 @@
 + dwm-autostart-20210120-cb3f58a.diff
 + dwm-fibonacci-20200418-c82db69.diff
 + dwm-awesomebar-statuscmd-signal-6.2.diff
++ dwm-hide_vacant_tags-6.2.diff
