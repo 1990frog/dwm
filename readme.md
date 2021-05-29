@@ -6,3 +6,4 @@
 + dwm-awesomebar-statuscmd-signal-6.2.diff
 + dwm-hide_vacant_tags-6.2.diff
 + dwm-fullscreen-6.2.diff
++ dwm-scratchpad-20170207-bb3bd6f.diff
