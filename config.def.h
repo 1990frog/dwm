@@ -99,14 +99,23 @@ static Key keys[] = {
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	// 逆时针切换
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
+        // 窗口纵向排列
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
+	// 窗口横向排列
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
+	// 左侧窗口增加宽度
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
+	// 左侧窗口减少宽度
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	// 增加窗口高度
 	{ MODKEY|ShiftMask,             XK_h,      setcfact,       {.f = +0.25} },
+	// 减少窗口高度
 	{ MODKEY|ShiftMask,             XK_l,      setcfact,       {.f = -0.25} },
+	// 默认窗口尺寸
 	{ MODKEY|ShiftMask,             XK_o,      setcfact,       {.f =  0.00} },
+        // 设置主窗口 
 	{ MODKEY,                       XK_Return, zoom,           {0} },
+	// padding
 	{ MODKEY|Mod1Mask,              XK_u,      incrgaps,       {.i = +1 } },
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_u,      incrgaps,       {.i = -1 } },
 	{ MODKEY|Mod1Mask,              XK_i,      incrigaps,      {.i = +1 } },
@@ -121,17 +130,26 @@ static Key keys[] = {
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_8,      incrohgaps,     {.i = -1 } },
 	{ MODKEY|Mod1Mask,              XK_9,      incrovgaps,     {.i = +1 } },
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_9,      incrovgaps,     {.i = -1 } },
+	// padding 0
 	{ MODKEY|Mod1Mask,              XK_0,      togglegaps,     {0} },
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_0,      defaultgaps,    {0} },
+	// 切换tag
 	{ MODKEY,                       XK_Tab,    view,           {0} },
+	// 关闭窗口
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
+	// 平铺模式 
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+	// 浮动模式
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+	// 单窗口模式
 	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	// 全屏
 	{ MODKEY|ShiftMask,             XK_f,      fullscreen,     {0} },
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
+	// 显示全部窗口
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
+	// 显示全部tag
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
@@ -146,6 +164,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
+	// 退出dwm
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
