@@ -1,5 +1,5 @@
 /* See LICENSE file for copyright and license details. */
-
+#include "X11/XF86keysym.h"
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
@@ -10,8 +10,8 @@ static const unsigned int gappov    = 30;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Source Code Pro:size=18" };
-static const char dmenufont[]       = "Source Code Pro:size=18";
+static const char *fonts[]          = { "Source Code Pro:size=10" };
+static const char dmenufont[]       = "Source Code Pro:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -86,6 +86,9 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
+static const char *chromecmd[] = {"google-chrome-stable", NULL};
+static const char *upvol[]   = { "/home/cai/Code/suckless/scripts/vol-up.sh",  NULL };
+static const char *downvol[] = { "/home/cai/Code/suckless/scripts/vol-down.sh",  NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -93,6 +96,12 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	// terimal
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
+        // chrome
+	{ MODKEY|Mod1Mask,              XK_c,      spawn,          {.v = chromecmd } },
+	// vol-up
+	{ MODKEY|Mod1Mask,              XK_u,      spawn,          {.v = upvol } },
+        // vol-down
+	{ MODKEY|Mod1Mask,              XK_d,      spawn,          {.v = downvol } },
         // 隐藏bar  
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	// 顺时针切换
