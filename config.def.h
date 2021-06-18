@@ -89,6 +89,7 @@ static const char *termcmd[]  = { "alacritty", NULL };
 static const char *chromecmd[] = {"google-chrome-stable", NULL};
 static const char *upvol[]   = { "/home/cai/Code/suckless/scripts/vol-up.sh",  NULL };
 static const char *downvol[] = { "/home/cai/Code/suckless/scripts/vol-down.sh",  NULL };
+static const char *slock[] = { "slock",  NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -98,6 +99,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
         // chrome
 	{ MODKEY|Mod1Mask,              XK_c,      spawn,          {.v = chromecmd } },
+        // slcok
+	{ ControlMask|Mod1Mask,         XK_l,      spawn,          {.v = slock } },
 	// vol-up
 	{ MODKEY|Mod1Mask,              XK_u,      spawn,          {.v = upvol } },
         // vol-down
