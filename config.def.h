@@ -87,8 +87,8 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "rofi", "-show", "drun", NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *chromecmd[] = {"google-chrome-stable", NULL};
-static const char *upvol[]   = { "/home/cai/Code/suckless/scripts/vol-up.sh",  NULL };
-static const char *downvol[] = { "/home/cai/Code/suckless/scripts/vol-down.sh",  NULL };
+static const char *upvol[]   = { "amixer", "set", "Master", "1%+", NULL };
+static const char *downvol[] = { "amixer", "set", "Master", "1%-", NULL };
 static const char *slock[] = { "slock",  NULL };
 
 static Key keys[] = {
