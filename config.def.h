@@ -90,6 +90,7 @@ static const char *chromecmd[] = {"google-chrome-stable", NULL};
 static const char *upvol[]   = { "amixer", "set", "Master", "1%+", NULL };
 static const char *downvol[] = { "amixer", "set", "Master", "1%-", NULL };
 static const char *slock[] = { "slock",  NULL };
+static const char *flameshot[] = { "flameshot", "gui" }
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -178,6 +179,9 @@ static Key keys[] = {
 	TAGKEYS(                        XK_9,                      8)
 	// 退出dwm
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+	// 截图
+	{ MODKEY|Mod1Mask,              XK_p,      spawn,          {.v = flameshot } },
+
 };
 
 /* button definitions */
